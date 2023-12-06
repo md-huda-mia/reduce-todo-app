@@ -1,0 +1,58 @@
+.todo_app {
+  width: 600px;
+  background: #00bcd4;
+  padding: 30px;
+  border-radius: 10px;
+}
+.todo_app h1 {
+  color: #213547;
+  font-size: 50px;
+}
+.input_box {
+  margin-top: 30px;
+}
+.input_box > input {
+  background: #0a97a9;
+  border: none;
+  height: 38px;
+  width: 70%;
+  margin-right: 5px;
+  border-radius: 4px;
+  outline: none;
+  font-size: 20px;
+  color: #fff;
+  padding: 5px 10px;
+}
+.input_box > button {
+  background: #213547;
+  color: #fff;
+  outline: none;
+  font-size: 20px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+ul.text_list {
+  margin-top: 35px;
+}
+ul.text_list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #0a97a9;
+}
+ul.text_list li span {
+  font-size: 20px;
+  color: #213547;
+}
+.box-btn button {
+  background: #213547;
+  border: none;
+  margin: 0 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
