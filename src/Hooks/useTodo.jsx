@@ -30,6 +30,9 @@ const useTodo = () => {
   const deleteTodo = (id) => {
     dispatch({ type: "DELETE_TODO", payload: id });
   };
+  const removeAllTodos = () => {
+    dispatch({ type: "REMOVE_ALL_TODOS" });
+  };
   // saving data to local storage
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -41,6 +44,7 @@ const useTodo = () => {
     toggleTodo,
     deleteTodo,
     editTodo,
+    removeAllTodos,
   };
 };
 

@@ -1,4 +1,4 @@
-// src/useTodos.js 
+// src/useTodos.js
 import { useReducer } from "react";
 
 export const todoReducer = (state, action) => {
@@ -23,6 +23,10 @@ export const todoReducer = (state, action) => {
       );
     case "DELETE_TODO":
       return state.filter((todo) => todo.id !== action.payload);
+
+    case "REMOVE_ALL_TODOS":
+      return [];
+
     default:
       return state;
   }

@@ -1,6 +1,6 @@
 .todo_app {
   width: 600px;
-  background: #00bcd4;
+  background: #f3edff;
   padding: 30px;
   border-radius: 10px;
 }
@@ -11,8 +11,8 @@
 .input_box {
   margin-top: 30px;
 }
-.input_box > input {
-  background: #0a97a9;
+.input_box form > input {
+  background: #ffffff;
   border: none;
   height: 38px;
   width: 70%;
@@ -20,10 +20,10 @@
   border-radius: 4px;
   outline: none;
   font-size: 20px;
-  color: #fff;
+  color: #000;
   padding: 5px 10px;
 }
-.input_box > button {
+.input_box form > button {
   background: #213547;
   color: #fff;
   outline: none;
@@ -42,7 +42,7 @@ ul.text_list li {
   justify-content: space-between;
   gap: 10px;
   padding: 10px;
-  border-bottom: 1px solid #0a97a9;
+  border-bottom: 1px solid #d0c7e4;
 }
 
 ul.text_list li span {
@@ -62,4 +62,16 @@ ul.text_list li span {
   color: #fff;
   padding: 5px 10px;
   border-radius: 3px;
+}
+button.allDeleteBtn {
+  margin-top: 35px;
+  width: 100%;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  background: #213547;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
