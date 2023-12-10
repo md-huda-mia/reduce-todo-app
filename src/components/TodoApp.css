@@ -1,21 +1,24 @@
 .todo_app {
-  width: 600px;
+  max-width: 600px;
   background: #f3edff;
   padding: 30px;
   border-radius: 10px;
 }
 .todo_app h1 {
   color: #213547;
-  font-size: 50px;
+  font-size: clamp(35px, 5vw, 50px);
 }
 .input_box {
   margin-top: 30px;
+}
+.input_box form {
+  max-width: 100%;
 }
 .input_box form > input {
   background: #ffffff;
   border: none;
   height: 38px;
-  width: 70%;
+  /* max-width: 70vw; */
   margin-right: 5px;
   border-radius: 4px;
   outline: none;
@@ -27,7 +30,7 @@
   background: #213547;
   color: #fff;
   outline: none;
-  font-size: 20px;
+  font-size: clamp(15px, 5vw, 20px);
   padding: 8px;
   border: none;
   border-radius: 8px;

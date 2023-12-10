@@ -34,7 +34,7 @@ const TodoApp = () => {
   };
   return (
     <div className="todo_app">
-      <h1>ToDo App</h1>
+      <h1>Task Management Application</h1>
       <div className="input_box">
         <FormTodo
           submitHandler={submitHandler}
