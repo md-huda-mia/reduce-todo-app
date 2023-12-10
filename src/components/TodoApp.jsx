@@ -1,7 +1,10 @@
 // src/App.js
 import React, { useState } from "react";
+
 import "./TodoApp.css";
 import useTodo from "../Hooks/useTodo";
+import FormTodo from "./Form/FormTodo";
+import TodoList from "./TodoList/TodoList";
 
 const TodoApp = () => {
   const { todos, addTodo, toggleTodo, editTodo, deleteTodo, removeAllTodos } =
@@ -33,44 +36,19 @@ const TodoApp = () => {
     <div className="todo_app">
       <h1>ToDo App</h1>
       <div className="input_box">
-        <form onSubmit={submitHandler}>
-          <input
-            type="text"
-            value={newTodo}
-            onChange={(e) => setNewTodo(e.target.value)}
-          />
-          <button type="submit" onClick={handleAddTodo}>
-            {editingTodo ? "Edit" : "Add"} Todo
-          </button>
-        </form>
+        <FormTodo
+          submitHandler={submitHandler}
+          newTodo={newTodo}
+          setNewTodo={setNewTodo}
+          editingTodo={editingTodo}
+          handleAddTodo={handleAddTodo}></FormTodo>
       </div>
+      <TodoList
+        handleEditTodo={handleEditTodo}
+        deleteTodo={deleteTodo}
+        toggleTodo={toggleTodo}
+        todos={todos}></TodoList>
 
-      <ul className="text_list">
-        {todos.map((todo) => (
-          <>
-            <li key={todo.id}>
-              <div className="todo_text">
-                <input
-                  type="checkbox"
-                  checked={todo.completed}
-                  onChange={() => toggleTodo(todo.id)}
-                />
-                <span
-                  style={{
-                    textDecoration: todo.completed ? "line-through" : "none",
-                  }}
-                  onClick={() => toggleTodo(todo.id)}>
-                  {todo.text}
-                </span>
-              </div>
-              <div className="box-btn">
-                <button onClick={() => handleEditTodo(todo.id)}>Edit</button>
-                <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-              </div>
-            </li>
-          </>
-        ))}
-      </ul>
       {todos.length > 0 && (
         <button className="allDeleteBtn" onClick={removeAllTodos}>
           delete
