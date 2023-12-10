@@ -6,7 +6,7 @@
 }
 .todo_app h1 {
   color: #213547;
-  font-size: clamp(35px, 5vw, 50px);
+  font-size: clamp(22px, 5vw, 35px);
 }
 .input_box {
   margin-top: 30px;
