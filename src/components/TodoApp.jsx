@@ -39,16 +39,24 @@ const TodoApp = () => {
           {editingTodo ? "Edit" : "Add"} Todo
         </button>
       </div>
+
       <ul className="text_list">
         {todos.map((todo) => (
           <li key={todo.id}>
-            <span
-              style={{
-                textDecoration: todo.completed ? "line-through" : "none",
-              }}
-              onClick={() => toggleTodo(todo.id)}>
-              {todo.text}
-            </span>
+            <div className="todo_text">
+              <input
+                type="checkbox"
+                checked={todo.completed}
+                onChange={() => toggleTodo(todo.id)}
+              />
+              <span
+                style={{
+                  textDecoration: todo.completed ? "line-through" : "none",
+                }}
+                onClick={() => toggleTodo(todo.id)}>
+                {todo.text}
+              </span>
+            </div>
             <div className="box-btn">
               <button onClick={() => handleEditTodo(todo.id)}>Edit</button>
               <button onClick={() => deleteTodo(todo.id)}>Delete</button>

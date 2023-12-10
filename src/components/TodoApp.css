@@ -44,9 +44,16 @@ ul.text_list li {
   padding: 10px;
   border-bottom: 1px solid #0a97a9;
 }
+
 ul.text_list li span {
   font-size: 20px;
   color: #213547;
+}
+.todo_text {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
 }
 .box-btn button {
   background: #213547;
