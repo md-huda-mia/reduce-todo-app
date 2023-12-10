@@ -15,7 +15,7 @@ const FormTodo = ({
         onChange={(e) => setNewTodo(e.target.value)}
       />
       <button type="submit" onClick={handleAddTodo}>
-        {editingTodo ? "Edit" : "Add"} Todo
+        {editingTodo ? "Edit" : "Add"} Task
       </button>
     </form>
   );
