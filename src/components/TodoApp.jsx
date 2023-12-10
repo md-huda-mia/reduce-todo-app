@@ -51,7 +51,7 @@ const TodoApp = () => {
 
       {todos.length > 0 && (
         <button className="allDeleteBtn" onClick={removeAllTodos}>
-          delete
+          All Delete
         </button>
       )}
     </div>
