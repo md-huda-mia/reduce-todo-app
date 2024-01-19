@@ -1,6 +1,7 @@
 .todo_app {
   max-width: 600px;
-  background: #f3edff;
+  background: #fff;
+
   padding: 30px;
   border-radius: 10px;
 }
@@ -15,8 +16,8 @@
   max-width: 100%;
 }
 .input_box form > input {
-  background: #ffffff;
-  border: none;
+  background: transparent;
+  border: 1px solid #213547;
   height: 38px;
   /* max-width: 70vw; */
   margin-right: 5px;
